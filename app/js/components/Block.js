@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import Images from './Images';
 
 class Block extends React.Component{
 
@@ -10,9 +9,7 @@ class Block extends React.Component{
     }
 
     getImageUrl() {
-        let img = Math.random() * (Images.images.length - 1);
-        img = Math.round(img);
-        return Images.images[img].display_sizes[0].uri;
+        return "https://unsplash.it/640/480?image="+Math.round(Math.random()*100);
     }
 
 

@@ -35,7 +35,7 @@ class PageBlock extends React.Component{
         };
         if (!this.state.active) {
             el.style.transform = `translate(${-offset.left}px,${-offset.top}px) scale(1)`;
-            $("body").css('overflow','hidden');
+            $("body").css('overflow-y','hidden');
         } else {
             el.style.transform = '';
         }

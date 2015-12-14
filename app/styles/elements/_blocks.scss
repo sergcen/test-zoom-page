@@ -1,0 +1,87 @@
+.block {
+  background: $block-bg-color;
+  border-radius: 3px;
+  margin-left: 2%;
+  margin-top: 2%;
+  float: left;
+  overflow: hidden;
+  img {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+  }
+  &__fullsize {
+    background: image-url('fullsize.png') no-repeat 0 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-indent: -9000px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.block--big {
+  width: 62%;
+  @include aspect-ratio(62,45);
+  img {
+    height: 100%;
+  }
+}
+
+.block--medium {
+  width: 30%;
+  @include aspect-ratio(30,45);
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.block--small {
+  width: 30%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include aspect-ratio(300,216);
+}
+
+.block-row {
+  position: relative;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.block-container {
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  &--medium {
+    width: 30%;
+    .block--small {
+      margin-left: 0;
+      float: none;
+      width: 100%;
+      margin-top: 6%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

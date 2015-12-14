@@ -54,8 +54,8 @@ class PageBlock extends React.Component{
         return (
             <div className={ `page-block ${ this.calcClass() }` } ref="block">
                 <div className="page-block__content" ref="contentBlock">
-                    {this.props.children}
                     <a onClick={ this.setActive } className="page-block__close">закрыть</a>
+                    {this.props.children}
                 </div>
                 <div className="page-block__trigger" onClick={ this.setActive }></div>
             </div>

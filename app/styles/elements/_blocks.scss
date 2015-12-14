@@ -65,6 +65,9 @@
   &:after {
     clear: both;
   }
+  &:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .block-container {
